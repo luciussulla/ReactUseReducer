@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState, useReducer} from 'react'
 
-function App() {
+const courses = [
+  {
+  id:1, 
+  text: "something", 
+  }, 
+  {
+    id:2, 
+    text: "blabla",
+  },
+  {
+    id:3, 
+    text: "number 3blabla",
+  }
+]
+
+const coursesReducer = (state, action)=> {
+  switch(action.type) {
+    case 'ADD': 
+      return ;
+    case 'REMOVE': 
+      return;
+    case 'FETCH': 
+      return; 
+    default: 
+      throw new Error("something went wrong")
+  }
+}
+
+
+const App = ()=> {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
