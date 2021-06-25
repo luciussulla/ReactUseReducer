@@ -11,7 +11,7 @@ const Form = ({addHandler})=> {
       id: Math.floor(Math.random()*1000),
       text: inputData
     }
-    addHandler({type: "Add", course})
+    addHandler({type: "ADD", course})
     setInputData('')
   }
 

@@ -16,11 +16,11 @@ const courses = [
   }
 ]
 
-
 const coursesReducer = (state, action)=> {
+  console.log(action)
   switch(action.type) {
     case 'ADD': 
-      return ;
+      return [...state, action.course]
     case 'REMOVE': 
       return state.filter(course=> course.id !== action.id)
     case 'FETCH': 
